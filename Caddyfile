@@ -1,0 +1,5 @@
+127.0.0.1, 10.10.50.149 {
+    root * public
+    php_fastcgi 10.10.50.149:9000 
+    file_server 
+}

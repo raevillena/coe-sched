@@ -1,0 +1,9 @@
+todo
+- database in the searchbarooom
+- database in the FullCalendarSearch bar teacher
+- databse in the timetable function
+- database in timetableSearchSched
+
+(Fix Select Components because everytime you change tab ViewSchedule/SearchSchedule
+ the data are being request from the backend time to time)
+TimeTableFunction.tsx - DONE 

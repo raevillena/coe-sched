@@ -1,0 +1,141 @@
+.draggable {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    /* border: 2px solid #1576c1;
+    background-color: rgba(148, 219, 253); */
+    border-radius: 10px;
+    height: 50px;
+    width: 120px;
+    margin: 10px;
+    touch-action: none;
+    position: absolute;
+    color: black;
+    z-index: 10;
+}
+
+.rect_is_active {
+    border: 2px solid #1576c1;
+    background-color: rgba(148, 219, 253);
+}
+
+.rect_is_not_active {
+    border: 2px solid #c11515;
+    background-color: rgba(248, 114, 114);
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 90px;
+    background-color: #1576c1;
+    color: white;
+    border-radius: 5px;
+    height: 25px;
+    position: absolute;
+    top: -20px;
+    z-index: 20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-bar button:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+.editing-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #1576c1;
+    background-color: rgba(148, 219, 253, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.5s;
+    color: black;
+    pointer-events: none;
+}
+
+.image-container {
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.floor-plan-container {
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.floor-plan-image {
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.cursor-grab {
+    cursor: grab;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.color-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    border-radius: 10px;
+    padding: 2px;
+    position: absolute;
+    top: -40px;
+    left: 25px;
+}
+
+.color-options button {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.color-options button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.grid-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.grid-line:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.2);
+}

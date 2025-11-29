@@ -1,0 +1,83 @@
+.fc .fc-col-header-cell {
+    color: rgba(0, 0, 0, 0.866);
+}
+:root {
+    --fc-today-bg-color: inherit !important;
+    --fc-border-color: #8080809f;
+    --fc-bg-event-color: rgb(143, 223, 130);
+}
+
+.fc-timegrid-event .fc-event-main {
+    min-height: 1000px;
+    display: block;
+}
+
+.fc .fc-event-title-container {
+    height: auto; /* Automatically adjust to fit content */
+}
+
+/* .fc .fc-timegrid-slot {
+    border-bottom: 0px;
+    height: 2em;
+} */
+
+.outline-dark {
+    border: 1px solid #333738; /* Darker outline */
+}
+
+.fc .fc-event {
+    border-radius: 5px;
+    padding: 5px;
+    overflow: clip;
+}
+
+#course_scheduling_calendar .fc .fc-timegrid-slot {
+    border-bottom: 0px;
+    height: 3.7em;
+}
+
+/* Rooms Occupied Calendar */
+#rooms_occupied_calendar .fc .fc-timegrid-slot {
+    border-bottom: 0px;
+    height: 3em;
+}
+
+/* End of Rooms Occupied Calendar */
+
+/*///////////////// fix width ///////////////////*/
+.fc-col-header,
+.fc-timegrid-body {
+    width: 100% !important;
+}
+
+.fc-timegrid-body {
+    table {
+        width: 100% !important;
+    }
+}
+/*/ //////////////// border color for the calendar ///////////////////*/
+/* .fc .fc-timegrid-slot {
+    border: 2px solid #333738;
+} */
+/* .fc-theme-standard .fc-scrollgrid {
+    border: 2px solid #333738;
+} */
+/* .fc-scrollgrid-sync-inner {
+    border: 2px solid #333738;
+} */
+/* .fc-theme-standard td,
+.fc-theme-standard th {
+    border-top: 2px solid #333738;
+    border-left: 2px solid #333738;
+} */
+.slot-label-content {
+    padding: 0 5px 0 5px;
+}
+.fc .fc-timegrid-axis-cushion,
+.fc .fc-timegrid-slot-label-cushion {
+    padding: 0px 7px;
+    margin-left: 5px;
+    float: left;
+    font-size: 1rem;
+    /* font-weight: 600; */
+}

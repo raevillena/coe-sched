@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
+use Exception;
+class SuperAdmin
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        //not logged in
+        if(!Auth::check()) {
+            return redirect()->route('login');
+        }
+
+        $userRole = Auth::user()->role;
+        
+        //Super Admin
+        if ($userRole == 'super-admin') {
+            return $next($request);
+
+        //Admin
+        } elseif ($userRole == 'admin') {
+            return redirect()->route('admin.dashboard');
+        }
+
+        //User
+        elseif ($userRole == 'user') {
+            return redirect()->route('dashboard');
+        } else {
+            // You can add a default return statement or throw an exception for unknown user roles
+            throw new Exception('Unknown user role');
+        }
+    }
+}

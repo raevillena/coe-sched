@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Europa Grotesk SH Demi Bold';
+    src: url('/Fonts/europa-grotesk-sh-demi-bold.ttf') format('truetype');
+    font-weight: 600; 
+    font-style: normal;
+}
+
+.font-europa {
+    font-family: 'Europa Grotesk SH Demi Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url('/Fonts/proximanova_black.otf') format('opentype');
+    font-weight: 900; 
+    font-style: normal;
+}
+
+.font-proxima-black {
+    font-family: 'Proxima Nova Black', sans-serif;
+}
+
