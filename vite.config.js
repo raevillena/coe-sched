@@ -10,10 +10,27 @@ export default defineConfig({
         }),
         react(),
     ],
+    resolve: {
+        // Fix for framer-motion dependency issues
+        dedupe: ['framer-motion'],
+    },
+    optimizeDeps: {
+        // Force pre-bundling of framer-motion to resolve dependency issues
+        include: ['framer-motion'],
+        esbuildOptions: {
+            // Handle CommonJS modules in framer-motion
+            target: 'es2020',
+        },
+    },
     build: {
         // Disable sourcemaps in production to avoid resolution errors
         // They're not needed in production and cause build warnings
         sourcemap: false,
+        // CommonJS options for better compatibility
+        commonjsOptions: {
+            include: [/node_modules/],
+            transformMixedEsModules: true,
+        },
         // Improve chunking to reduce bundle sizes
         rollupOptions: {
             output: {
