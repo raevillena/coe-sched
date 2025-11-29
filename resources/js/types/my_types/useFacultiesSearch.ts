@@ -13,7 +13,8 @@ interface PageProps extends InertiaPageProps {
 }
 
 export const useFacultiesSearch = (baseLink: string) => {
-    const { props: pageProps } = usePage<PageProps>();
+    const { props } = usePage();
+    const pageProps = props as PageProps;
 
     const [searchTerm, setSearchTerm] = useState<string>(
         pageProps.search || ""

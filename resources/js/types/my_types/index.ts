@@ -178,7 +178,7 @@ export interface AcademicProgram {
     program_name: string;
 }
 
-export interface Curriculum {
+export interface Curriculum extends Record<string, unknown> {
     id: number;
     curriculum_year: number;
     period: string;

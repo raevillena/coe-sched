@@ -56,7 +56,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         letters.length,
         letters.map((_, i) => ({
             from: animationFrom,
-            to: inView
+            to: (inView
                 ? async (next: (props: { opacity: number; transform: string }) => Promise<void>) => {
                     await next(animationTo);
                     animatedCount.current += 1;
@@ -64,10 +64,10 @@ const SplitText: React.FC<SplitTextProps> = ({
                         onLetterAnimationComplete();
                     }
                 }
-                : animationFrom,
+                : animationFrom) as { opacity: number; transform: string } | ((next: (props: { opacity: number; transform: string }) => Promise<void>) => Promise<void>),
             delay: i * delay,
             config: { easing },
-        }))
+        })) as any
     );
 
     return (

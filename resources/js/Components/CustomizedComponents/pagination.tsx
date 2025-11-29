@@ -65,7 +65,7 @@ const PaginationComponent: React.FC<PaginationProps> = ({
                                                 >
                                                     <Link
                                                         href={link.url || "#"}
-                                                        method="get"
+                                                        method={undefined}
                                                         onClick={(e) => {
                                                             if (
                                                                 !link.url ||

@@ -13,7 +13,8 @@ interface PageProps extends InertiaPageProps {
 }
 
 export default function Index({ auth, faculties, departments, breadcrumbs }: FacultyProps) {
-    const { props: pageProps } = usePage<PageProps>();
+    const { props } = usePage();
+    const pageProps = props as PageProps;
 
     const [searchTerm, setSearchTerm] = useState<string>(pageProps.search || "");
     const [inputValue, setInputValue] = useState<string>(pageProps.search || "");

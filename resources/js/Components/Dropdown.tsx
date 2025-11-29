@@ -1,5 +1,6 @@
 import { Transition } from '@headlessui/react';
-import { InertiaLinkProps, Link } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
+import type { ComponentProps } from 'react';
 import {
     createContext,
     Dispatch,
@@ -109,7 +110,7 @@ const DropdownLink = ({
     className = '',
     children,
     ...props
-}: InertiaLinkProps) => {
+}: ComponentProps<typeof Link>) => {
     return (
         <Link
             {...props}

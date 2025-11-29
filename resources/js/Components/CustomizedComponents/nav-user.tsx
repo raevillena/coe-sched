@@ -1,6 +1,7 @@
 "use client";
 
 import { LogOut } from "lucide-react";
+import { Method } from "@inertiajs/core";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar";
 import {
@@ -84,7 +85,7 @@ export function NavUser({
                         <DropdownMenuItem>
                             <Link
                                 href={route("logout")}
-                                method="post"
+                                method={Method.POST}
                                 as="button"
                                 className="flex items-center space-x-2"
                             >
